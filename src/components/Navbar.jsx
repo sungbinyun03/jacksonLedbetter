@@ -5,7 +5,7 @@ import logo34 from "../assets/34logo1.png";
 const navLinks = [
   { path: "/", label: "Home" },
   { path: "/about", label: "About" },
-  { path: "/blog", label: "Blog" }
+  // { path: "/blog", label: "Blog" }
 ];
 
 
