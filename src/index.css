@@ -1,0 +1,9 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* helper for consistent section spacing */
+.section {
+  @apply px-4 sm:px-8 md:px-16 lg:px-24 py-16 mx-auto;
+}

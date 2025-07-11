@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: your-org/your-repo
+  branch: main
+  client_id:  GITHUB_OAUTH_CLIENT_ID
+  client_secret: GITHUB_OAUTH_SECRET
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "date",  label: "Date", widget: "datetime" }
+      - { name: "image", label: "Cover Image", widget: "image" }
+      - { name: "excerpt", label: "Excerpt", widget: "string" }
+      - { name: "body", label: "Body", widget: "markdown" }
