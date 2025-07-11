@@ -6,7 +6,7 @@ import drums4 from "../assets/drums4.JPG";
 import logoBg from "../assets/34logo2.png";
 
 // import drums5 from "../assets/drums4.jpg";
-
+ 
 
 export default function Studio() {
   const gallery = [drums1, drums2, drums3, drums4];
