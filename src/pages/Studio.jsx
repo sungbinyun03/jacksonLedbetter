@@ -1,8 +1,8 @@
 import gear from "../data/gear";
 import drums1 from "../assets/drums1.jpg";
 import drums2 from "../assets/drums2.jpg";
-import drums3 from "../assets/drums3.jpg";
-import drums4 from "../assets/drums4.jpg";
+import drums3 from "../assets/drums3.JPG";
+import drums4 from "../assets/drums4.JPG";
 import logoBg from "../assets/34logo2.png";
 
 // import drums5 from "../assets/drums4.jpg";
