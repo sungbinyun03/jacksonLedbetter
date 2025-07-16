@@ -98,10 +98,13 @@ export default {
     Keys: [
       "Microkorg Vocoder/Keyboard",
       "Korg Minilogue Synthesizer",
-      "Behringer Model D Synthesizer",
+      "Behringer Model D Synthesizer",
       "Casio CZ‑230S Synthesizer",
       "Casio CT‑360 Keyboard",
-      "Yamaha PSR E403 Keyboard",
+      "Moog Etherwave Theremin",
+      "Teenage Engineering Sub",
+      "Yamaha DX21 Synthesizer",
+      "Yamaha PSR E403 Keyboard",
       "Alesis Nanopiano Module",
       "Arturia Keylab MIDI Keyboard",
       "Various software synths"

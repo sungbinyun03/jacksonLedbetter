@@ -11,12 +11,12 @@ export default function Hero() {
 
       {/* name */}
       <h1 className="text-2xl font-extrabold tracking-wide mb-4">
-        JACKSON LEDBETTER
+        JACKSON LEDBETTER
       </h1>
 
       {/* tagline */}
       <p className="max-w-xl leading-relaxed">
-        is a <strong>drummer, producer, educator, recording, mixing &amp; mastering engineer</strong> based in <strong>Northern Virginia</strong>.
+        is a <strong>drummer, producer, educator, recording, mixing & mastering engineer</strong> based in <strong>Northern Virginia</strong>.
       </p>
     </section>
   );

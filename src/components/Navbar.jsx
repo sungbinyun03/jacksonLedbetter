@@ -3,11 +3,9 @@ import { useState } from "react";
 import logo34 from "../assets/34logo1.png";
 
 const navLinks = [
-  { path: "/", label: "Home" },
-  { path: "/about", label: "About" },
+  { path: "/about", label: "About" }
   // { path: "/blog", label: "Blog" }
 ];
-
 
 function StudioNavItem({ closeMenu }) {
   const [burst, setBurst] = useState(false);
@@ -45,47 +43,86 @@ function StudioNavItem({ closeMenu }) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  // Helper to close menu on link click
+  const handleClose = () => setOpen(false);
+
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur px-4 py-6 md:px-6">
-  <nav className="max-w-7xl mx-auto flex items-center justify-between py-1"> {/* 👈 kill .section, set py-1 */}
-    <NavLink to="/" className="font-extrabold text-lg leading-none tracking-wide">
-      JACKSON LEDBETTER
-    </NavLink>
+      <nav className="max-w-7xl mx-auto flex items-center justify-between py-1">
+        <NavLink to="/" className="font-extrabold text-lg leading-none tracking-wide">
+          JACKSON LEDBETTER
+        </NavLink>
 
-    <button
-      aria-label="Toggle menu"
-      className="md:hidden text-xl leading-none p-1"
-      onClick={() => setOpen(o => !o)}
-    >
-      ☰
-    </button>
+        <button
+          aria-label="Toggle menu"
+          className="md:hidden text-xl leading-none p-1"
+          onClick={() => setOpen(o => !o)}
+        >
+          ☰
+        </button>
 
-    <ul
-      className={`md:flex gap-6 font-medium leading-none items-center ${
-        open ? "block" : "hidden md:block"
-      }`}
-    >
-      {navLinks.map(l => (
-        <li key={l.path} className="py-0.5">   
-          <NavLink
-            to={l.path}
-            onClick={() => setOpen(false)}
-            className={({ isActive }) =>
-              isActive ? "underline" : "hover:underline"
-            }
-          >
-            {l.label}
-          </NavLink>
-        </li>
-      ))}
-      <StudioNavItem closeMenu={() => setOpen(false)} />
+        {/* Desktop menu */}
+        <ul
+          className={
+            "gap-6 font-medium leading-none items-center hidden md:flex"
+          }
+        >
+          <StudioNavItem closeMenu={handleClose} />
+          <li><a href="https://credits.muso.ai/profile/5162283a-055d-43d7-b063-5fd7b3b76e64" className="hover:underline">Credits</a></li>
+          <li>
+            <NavLink to="/studio#services" className="hover:underline" onClick={handleClose}>
+              Services
+            </NavLink>
+          </li>
+          {navLinks.map(l => (
+            <li key={l.path} className="py-0.5">
+              <NavLink
+                to={l.path}
+                onClick={handleClose}
+                className={({ isActive }) =>
+                  isActive ? "underline" : "hover:underline"
+                }
+              >
+                {l.label}
+              </NavLink>
+            </li>
+          ))}
+          <li><a href="https://www.instagram.com/jackson.ledbetter?igsh=eXJpaDY3eGcwdGpt&utm_source=qr" className="hover:underline">Instagram</a></li>
+          <li><a href="https://open.spotify.com/artist/5JemdPtKVI3tRODIOvSZbp?si=mqLloH-EQS2gPIATt3QxKw" className="hover:underline">Spotify</a></li>
+          <li><a href="mailto:jackson@jacksonledbetter.com" className="hover:underline">Email</a></li>
+        </ul>
 
-      <li><a href = " https://credits.muso.ai/profile/5162283a-055d-43d7-b063-5fd7b3b76e64" className = "hover:underline"> Credits </a></li>
-      <li><a href="https://open.spotify.com/artist/5JemdPtKVI3tRODIOvSZbp?si=mqLloH-EQS2gPIATt3QxKw" className="hover:underline">Spotify</a></li>
-      <li><a href="https://www.instagram.com/jackson.ledbetter?igsh=eXJpaDY3eGcwdGpt&utm_source=qr" className="hover:underline">Instagram</a></li>
-    </ul>
-  </nav>
-</header>
-
+        {/* Mobile menu overlay */}
+        {open && (
+          <div className="fixed inset-0 z-50 bg-white/95 flex flex-col items-center justify-start pt-24 px-6 md:hidden transition-all">
+            <ul className="flex flex-col gap-6 w-full text-lg font-medium">
+              <StudioNavItem closeMenu={handleClose} />
+              <li><a href="https://credits.muso.ai/profile/5162283a-055d-43d7-b063-5fd7b3b76e64" className="hover:underline" onClick={handleClose}>Credits</a></li>
+              <li>
+                <NavLink to="/studio#services" className="hover:underline" onClick={handleClose}>
+                  Services
+                </NavLink>
+              </li>
+              {navLinks.map(l => (
+                <li key={l.path} className="py-0.5">
+                  <NavLink
+                    to={l.path}
+                    onClick={handleClose}
+                    className={({ isActive }) =>
+                      isActive ? "underline" : "hover:underline"
+                    }
+                  >
+                    {l.label}
+                  </NavLink>
+                </li>
+              ))}
+              <li><a href="https://www.instagram.com/jackson.ledbetter?igsh=eXJpaDY3eGcwdGpt&utm_source=qr" className="hover:underline" onClick={handleClose}>Instagram</a></li>
+              <li><a href="https://open.spotify.com/artist/5JemdPtKVI3tRODIOvSZbp?si=mqLloH-EQS2gPIATt3QxKw" className="hover:underline" onClick={handleClose}>Spotify</a></li>
+              <li><a href="mailto:jackson@jacksonledbetter.com" className="hover:underline" onClick={handleClose}>Email</a></li>
+            </ul>
+          </div>
+        )}
+      </nav>
+    </header>
   );
 }
