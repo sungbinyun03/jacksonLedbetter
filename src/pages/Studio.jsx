@@ -1,14 +1,19 @@
 import gear from "../data/gear";
-import drums1 from "../assets/drums1.jpg";
-import drums2 from "../assets/drums2.jpg";
-import drums3 from "../assets/drums3.JPG";
-import drums4 from "../assets/drums4.JPG";
 import logoBg from "../assets/34logo2.PNG";
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useContentConfig } from "../hooks/useContentConfig";
 
 export default function Studio() {
-  const gallery = [drums1, drums2, drums3, drums4];
+  const { config, resolveAsset, isLoading } = useContentConfig();
+  
+  // Get gallery images from config
+  const gallery = config?.studio?.galleryImages 
+    ? config.studio.galleryImages.map(img => resolveAsset(img))
+    : [];
+
+  // Get gear from config, fall back to gear.js if not available
+  const studioGear = config?.gear || gear;
 
   // Carousel state
   const [current, setCurrent] = useState(0);
@@ -40,15 +45,11 @@ export default function Studio() {
     }
   }, [location]);
 
-  const services = [
-    "Drumset Performance",
-    "Drum Recordings", 
-    "Music Production",
-    "Recording Engineering",
-    "Mix & Master Engineering",
-    "Drum Lessons",
-    "Music Production Lessons"
-  ];
+  const services = config?.studio?.services || [];
+  
+  if (isLoading || !config) {
+    return <div className="section"><div>Loading...</div></div>;
+  }
 
   return (
     <div className="relative">
@@ -95,7 +96,7 @@ export default function Studio() {
       </section>
 
       {/* services section */}
-      <section id="services" className="section">
+      <section id="services" className="section" style={{ textAlign: config.studio?.textAlign || 'left' }}>
         <h2 className="text-3xl font-bold mb-8">Services</h2>
         <ul className="list-disc pl-5 space-y-2 text-lg">
           {services.map((service) => (
@@ -108,7 +109,7 @@ export default function Studio() {
       <section className="section">
         <h2 className="text-3xl font-bold mb-8">Studio 34 Gear</h2>
 
-        {Object.entries(gear).map(([cat, items]) => (
+        {Object.entries(studioGear).map(([cat, items]) => (
           <div key={cat} className="mb-10">
             <h3 className="text-xl font-semibold mb-2">{cat}</h3>
             <ul className="list-disc pl-5 space-y-1">

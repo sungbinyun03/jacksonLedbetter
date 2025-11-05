@@ -1,0 +1,10 @@
+.git
+.vscode
+.idea
+*.swp
+*.swo
+*~
+node_modules
+dist
+.DS_Store
+

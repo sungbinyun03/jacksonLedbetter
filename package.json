@@ -9,8 +9,6 @@
   },
   "dependencies": {
     "buffer": "^6.0.3",
-    "decap-cms-app": "^3.6.4",
-    "gray-matter": "^4.0.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-helmet": "^6.1.0",

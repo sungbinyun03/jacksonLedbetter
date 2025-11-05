@@ -1,0 +1,28 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/assets/*", "/content/*", "/api/*", "/admin/*"]
+  },
+  "routes": [
+    {
+      "route": "/content/config.json",
+      "headers": {
+        "cache-control": "no-store, must-revalidate"
+      }
+    },
+    {
+      "route": "/admin",
+      "rewrite": "/admin.html"
+    }
+  ],
+  "globalHeaders": {
+    "cache-control": "public, max-age=0, must-revalidate"
+  },
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html",
+      "statusCode": 404
+    }
+  }
+}
+
