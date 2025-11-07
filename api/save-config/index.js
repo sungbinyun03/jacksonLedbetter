@@ -4,6 +4,7 @@ import { createContentUpdatePR, autoMergePullRequest, getOctokit, getRepoInfo } 
 app.http('saveConfig', {
     methods: ['POST', 'OPTIONS'],
     authLevel: 'anonymous',
+    route: 'save-config',
     handler: async (request, context) => {
         // Handle CORS preflight
         if (request.method === 'OPTIONS') {
