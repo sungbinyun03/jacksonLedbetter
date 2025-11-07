@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import EditorPanel from "./components/EditorPanel";
 import PreviewPane from "./components/PreviewPane";
 
-const SITE_URL = import.meta.env.VITE_SITE_URL || "http://localhost:5173";
+const SITE_URL = import.meta.env.VITE_SITE_URL || "https://yellow-wave-0ec54191e.3.azurestaticapps.net";
 console.log('[AdminApp] Initializing with SITE_URL:', SITE_URL);
 
 export default function AdminApp() {
