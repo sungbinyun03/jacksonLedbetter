@@ -1,5 +1,5 @@
 {
-  "stylePreset": "classic",
+  "stylePreset": "airy",
   "colors": {
     "primary": "#000000",
     "background": "#ffffff",
@@ -9,10 +9,15 @@
     "heroImage": "ledbetter1.jpg",
     "title": "JACKSON LEDBETTER",
     "subtitle": "is a drummer, producer, educator, recording, mixing & mastering engineer based in Northern Virginia.",
-    "textAlign": "center"
+    "textAlign": "right"
   },
   "studio": {
-    "galleryImages": ["drums1.jpg", "drums2.jpg", "drums3.JPG", "drums4.JPG"],
+    "galleryImages": [
+      "drums1.jpg",
+      "drums2.jpg",
+      "drums3.JPG",
+      "drums4.JPG"
+    ],
     "services": [
       "Drumset Performance",
       "Drum Recordings",
@@ -25,7 +30,10 @@
     "textAlign": "left"
   },
   "about": {
-    "images": ["ledbetter2.jpg", "ledbetter3.jpg"],
+    "images": [
+      "ledbetter2.jpg",
+      "ledbetter3.jpg"
+    ],
     "paragraphs": [
       "Jackson Ledbetter, a Northern Virginia native, is a producer, recording and post‑production engineer, studio musician, and educator.",
       "He began playing drums in third grade and has since performed over 400 shows across the nation. He has played drums for artists like Vivienne Artur, Shane Brady, Ellie Irwin, Dipsea Flower, and Matilde Heckler performing at venues such as Brighton Music Hall, Mercury Lounge, and Rockwood Music Hall.",
@@ -169,4 +177,3 @@
     ]
   }
 }
-
