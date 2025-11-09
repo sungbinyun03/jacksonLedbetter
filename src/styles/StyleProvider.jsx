@@ -22,7 +22,14 @@ export default function StyleProvider({ children, stylePreset, colors }) {
   }, [stylePreset, colors, preset]);
 
   return (
-    <div style={cssVars}>
+		<div
+			className="theme-root"
+			style={{
+				...cssVars,
+				backgroundColor: 'var(--color-background)',
+				color: 'var(--color-primary)'
+			}}
+		>
       {children}
     </div>
   );

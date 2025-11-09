@@ -3,7 +3,30 @@
 @tailwind components;
 @tailwind utilities;
 
-/* helper for consistent section spacing */
+/* helper for consistent section spacing driven by preset spacing vars */
 .section {
-  @apply px-4 sm:px-8 md:px-16 lg:px-24 py-16 mx-auto;
+	padding-left: var(--spacing-md);
+	padding-right: var(--spacing-md);
+	padding-top: var(--spacing-lg);
+	padding-bottom: var(--spacing-lg);
+	margin-left: auto;
+	margin-right: auto;
 }
+
+/* Theme mappings to CSS variables applied by StyleProvider */
+.theme-root a {
+	color: var(--color-accent);
+}
+
+/* Let preset roundedness override rounded-* utility classes */
+.theme-root :where(.rounded, [class*="rounded-"]) {
+	border-radius: var(--border-radius);
+}
+
+/* Let preset shadows override shadow-* utility classes */
+.theme-root .shadow-sm { box-shadow: var(--shadow-sm); }
+.theme-root .shadow, 
+.theme-root .shadow-md { box-shadow: var(--shadow-md); }
+.theme-root .shadow-lg, 
+.theme-root .shadow-xl, 
+.theme-root .shadow-2xl { box-shadow: var(--shadow-lg); }
