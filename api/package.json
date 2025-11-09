@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Azure Functions for CMS admin",
   "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18 <21"
+  },
   "scripts": {
     "start": "func start",
     "test": "echo \"No tests specified\""
