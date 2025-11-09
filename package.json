@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@octokit/rest": "^18.12.0",
+    "az": "^0.2.3",
     "buffer": "^6.0.3",
+    "login": "^0.8.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-helmet": "^6.1.0",
