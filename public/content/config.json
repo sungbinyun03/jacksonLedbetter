@@ -1,5 +1,5 @@
 {
-  "stylePreset": "airy",
+  "stylePreset": "minimal",
   "colors": {
     "primary": "#000000",
     "background": "#ffffff",
@@ -9,7 +9,7 @@
     "heroImage": "ledbetter1.jpg",
     "title": "JACKSON LEDBETTER",
     "subtitle": "is a drummer, producer, educator, recording, mixing & mastering engineer based in Northern Virginia.",
-    "textAlign": "right"
+    "textAlign": "center"
   },
   "studio": {
     "galleryImages": [
@@ -32,7 +32,8 @@
   "about": {
     "images": [
       "ledbetter2.jpg",
-      "ledbetter3.jpg"
+      "ledbetter3.jpg",
+      "image-1762726998110.jpg"
     ],
     "paragraphs": [
       "Jackson Ledbetter, a Northern Virginia native, is a producer, recording and post‑production engineer, studio musician, and educator.",
