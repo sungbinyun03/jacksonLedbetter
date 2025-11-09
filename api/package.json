@@ -1,20 +1,14 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "Azure Functions for CMS admin",
-  "type": "module",
-  "main": "index.js",
-  "engines": {
-    "node": ">=18 <21"
-  },
+  "description": "",
   "scripts": {
     "start": "func start",
-    "test": "echo \"No tests specified\""
+    "test": "echo \"No tests yet...\""
   },
   "dependencies": {
-    "@azure/functions": "^4.5.0",
-    "azure-functions-core-tools": "^4.0.0",
-    "@octokit/rest": "^20.0.0"
-  }
+    "@azure/functions": "^4.0.0"
+  },
+  "devDependencies": {},
+  "main": "src/{index.js,functions/*.js}"
 }
-
