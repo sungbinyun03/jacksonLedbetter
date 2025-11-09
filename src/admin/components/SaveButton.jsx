@@ -49,7 +49,7 @@ export default function SaveButton({ config, assetMap }) {
       const apiBase = import.meta.env.DEV
         ? (import.meta.env.VITE_API_BASE || 'http://localhost:7071')
         : (import.meta.env.VITE_API_BASE || '');
-      const endpoint = `${apiBase}/api/save-config`;
+      const endpoint = `${apiBase}/api/saveConfig`;
       console.log('[SaveButton] Publishing to endpoint:', endpoint);
 
       const response = await fetch(endpoint, {
