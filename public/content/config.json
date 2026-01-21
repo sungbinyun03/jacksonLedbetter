@@ -3,7 +3,7 @@
   "colors": {
     "primary": "#000000",
     "background": "#ffffff",
-    "accent": "#666666"
+    "accent": "#000000"
   },
   "home": {
     "heroImage": "ledbetter1.jpg",
@@ -19,8 +19,6 @@
       "drums4.JPG"
     ],
     "services": [
-      "Drumset Performance",
-      "Drum Recordings",
       "Music Production",
       "Recording Engineering",
       "Mix & Master Engineering",
@@ -51,31 +49,38 @@
       "Avantone Pro Active MixCubes Pair",
       "Barefoot Sound Footprint 03 Pair",
       "Barefoot Sound Footprint 03C",
-      "Kali Audio LP-6 Pair"
+      "Kali Audio LP-6 Pair",
+      "Grace Design m905 Monitor Controller"
     ],
     "Preamps": [
       "Avalon 737p Channel Strip",
       "UA 610mkII Channel Strip",
-      "Rupert Neve 551s ×4",
-      "AEA RPQs ×3",
+      "Rupert Neve 511s ×4",
+      "Rupert Neve 517",
+      "AEA RPQ2",
+      "AEA RPQ 500",
       "SSL SiX Channel Strips ×2",
       "Avalon U5"
     ],
     "Dynamic Processors": [
       "Empirical Labs Distressors ×2",
-      "Rupert Neve 535 Diode‑Bridge Compressors ×2",
+      "Teletronix LA-2A",
+      "Rupert Neve 535 Diode‑Bridge Compressors x2",
       "SSL G‑Comp"
     ],
     "Equalizers": [
-      "Rupert Neve 541 Inductor EQs ×2",
+      "Rupert Neve 551 Inductor EQs ×2",
       "SSL Ultraviolet Equalizer"
     ],
     "Other Outboard": [
+      "Rupert Neve Master Bus Transformer",
       "Rupert Neve Tape Emulators ×2",
+      "Lexicon PCM 41",
       "Alesis Quadraverb Reverb/Delay",
-      "Yamaha GEP‑50 Guitar FX Processor",
+      "Alesis NanoVerb",
       "Pioneer SR‑202W Spring Reverb",
-      "Walrus Audio R1 Reverb"
+      "SPL BiG",
+      "Yamaha GEP‑50 Guitar FX Processor"
     ],
     "Microphones": [
       "AEA R84",
@@ -85,15 +90,15 @@
       "AKG D112",
       "Beyerdynamic M58",
       "Cascade Fat Head‑SP ×2",
-      "Electro‑Voice RE10",
+      "Electro‑Voice RE10 x2",
       "Electro‑Voice RE11",
-      "Electro‑Voice RE15",
+      "Electro‑Voice RE15 x2",
       "Electro‑Voice RE16",
       "Electro‑Voice RE20",
-      "Electro‑Voice 635",
+      "Electro‑Voice 635 x2",
       "Electro‑Voice 664 ×4",
       "Electro‑Voice Raven",
-      "Electro‑Voice 649B 7831",
+      "Electro‑Voice 649B",
       "Neumann U87 Ai",
       "Neumann TLM 102",
       "Neumann TLM 103 ×2",
@@ -102,72 +107,85 @@
       "Royer R‑101",
       "Royer R‑10",
       "SE × RND RNR1",
-      "SE × RND RN17 (Cardioid/Omni)",
+      "SE × RND RN17 ",
+      "SE x RND RNT",
       "Soyuz 013 FET ×2",
       "Soyuz 017 FET",
+      "Soyuz 1973 FET",
       "Shure 55SH Series II",
-      "Shure KSM 44",
+      "Shure KSM44",
       "Shure SM7B",
-      "Shure SM57 ×3",
+      "Shure SM57 ×2",
       "Shure SM58 ×4",
       "Shure Unisphere I"
     ],
     "Drums / Percussion": [
       "SJC Tour Series Set: 22×18, 12×8, 16×16, 18×16",
+      "1960s Drum Mate Set 20x16, 14x5, 12x8, 14x14, ",
       "Pacific Drums Set: 8×10, 10×12, 14×14, 20×16",
       "SJC Maple Snares: 14×5.5 & 14×5",
       "SJC Steel Snare 14×8",
       "Pearl Sensitone Steel Snare 14×5",
-      "Mapex Steel Piccolo Snare 13×3.5",
+      "1940s Ludwig All‑Wood Tom 13″",
       "1970s Ludwig Marching Bass 24×12",
       "SJC Pancake Kick 18×5",
       "SJC 'Snom' 14×10",
-      "1940s Ludwig All‑Wood Tom 13″",
       "LP Congas",
       "Vic Firth 32‑Key Xylophone",
       "Wide variety of Meinl, Sabian, and Zildjian cymbals",
       "Assorted percussion instruments"
     ],
     "Guitars / Basses": [
+      "Silvertone 1448 w/ Case Amp",
       "Yamaha Electric Guitar",
-      "Yamaha Bass Guitar",
+      "Goya Model G312 Acoustic Guitar",
       "Orangewood Dana Mahogany Acoustic Guitar",
-      "Laurel Canyon Acoustic Guitar",
+      "Yamaha Active Bass Guitar",
       "Kala KA‑T Mahogany Tenor Ukulele"
     ],
     "Keys": [
+      "1908 Bradbury Upright Concert Grand Piano",
+      "1973 Fender Rhodes Mark I \"Seventy Three\"",
+      "Moog Sub Phatty Synthesizer",
       "Microkorg Vocoder/Keyboard",
       "Korg Minilogue Synthesizer",
-      "Behringer Model D Synthesizer",
       "Casio CZ‑230S Synthesizer",
       "Casio CT‑360 Keyboard",
       "Moog Etherwave Theremin",
-      "Teenage Engineering Sub",
+      "Behringer Model D Synthesizer",
+      "Teenage Engineering Pocket Sub",
       "Yamaha DX21 Synthesizer",
       "Yamaha PSR E403 Keyboard",
-      "Alesis Nanopiano Module",
+      "Alesis NanoPiano",
       "Arturia Keylab MIDI Keyboard",
       "Various software synths"
     ],
     "Amps": [
-      "Orange Crush 100 W Combo Bass Amp",
-      "K Kustom V Lead Amp",
+      "Bogen Challenger CHB20A Tube Amp",
+      "Bugera 1960 Infinium 150W Tube Head",
+      "Bugera T50 Infinium 50W Tube Head",
+      "Bugera 212TS Cabinet",
+      "Orange Crush 100W Bass Combo Amp",
+      "K Kustom V Lead Combo Amp",
+      "Marshall AS100D Acoustic Combo Amp",
       "Marshall MG100 HDFX + MG412A Cab",
-      "Marshall MG15 MSII Stack",
-      "Vox Pathfinder Bass Amp 10 W",
-      "Vox VX50 Keyboard Amp"
+      "Vox Pathfinder Bass Amp 10W",
+      "Vox VX50 Keyboard Amp",
+      "Washburn WA20 Acoustic Amp"
     ],
     "Tape Recorders": [
       "TEAC A‑2340 ¼″ Tape Machine",
-      "TASCAM Portastudio 414 Cassette Recorder",
+      "TASCAM Portastudio 414mkII Cassette Recorder",
       "Fisher‑Price Cassette Recorder"
     ],
     "Interfaces / Mixers": [
       "UA Apollo x8 Interface",
+      "UA Apollo x16 Interface",
       "Tascam Model 16 Interface/Mixer",
       "TEAC Model 2A Mixer",
       "TEAC Model 1 Summing Mixer",
-      "UA Volt 476P Interface"
+      "UA Volt 476P Interface",
+      "Wolff Audio Collaborator Headphone Amp"
     ],
     "Other": [
       "TASCAM Field Recorder",
