@@ -3,7 +3,7 @@ import { useState } from "react";
 import logo34 from "../assets/34logo1.png";
 
 const navLinks = [
-  { path: "/about", label: "About" }
+  { path: "/about", label: "About" },
   // { path: "/blog", label: "Blog" }
 ];
 

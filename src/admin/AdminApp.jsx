@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import EditorPanel from "./components/EditorPanel";
 import PreviewPane from "./components/PreviewPane";
+import { clearAdminAuth } from "./AdminGate";
 
 const SITE_URL = import.meta.env.VITE_SITE_URL || "https://yellow-wave-0ec54191e.3.azurestaticapps.net";
 console.log('[AdminApp] Initializing with SITE_URL:', SITE_URL);
@@ -87,8 +88,22 @@ export default function AdminApp() {
       {/* Left: Editor Panel */}
       <div className="w-96 bg-white border-r border-gray-200 flex flex-col h-full">
         <div className="p-6 border-b border-gray-200 bg-gray-50 flex-shrink-0">
-          <h1 className="text-xl font-bold">CMS Admin</h1>
-          <p className="text-sm text-gray-600 mt-1">Edit site content</p>
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <h1 className="text-xl font-bold">CMS Admin</h1>
+              <p className="text-sm text-gray-600 mt-1">Edit site content</p>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                clearAdminAuth();
+                window.location.reload();
+              }}
+              className="px-3 py-2 text-sm border border-gray-300 rounded hover:bg-gray-100"
+            >
+              Log out
+            </button>
+          </div>
         </div>
         <div className="flex-1 overflow-y-auto">
           <EditorPanel
