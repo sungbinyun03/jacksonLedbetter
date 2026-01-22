@@ -4,6 +4,7 @@ import TextEditor from "./TextEditor";
 export default function GearEditor({ gear, onChange }) {
   const [newCategoryName, setNewCategoryName] = useState('');
   const [expandedCategories, setExpandedCategories] = useState({});
+  const [draftItemsText, setDraftItemsText] = useState({});
 
   const toggleCategory = (categoryName) => {
     setExpandedCategories(prev => ({
@@ -31,26 +32,13 @@ export default function GearEditor({ gear, onChange }) {
     onChange(updated);
   };
 
-  const addItem = (categoryName) => {
-    const category = gear[categoryName] || [];
-    const newItem = `New item`;
-    updateCategory(categoryName, [...category, newItem]);
-    // Expand category if collapsed
-    setExpandedCategories(prev => ({ ...prev, [categoryName]: true }));
-  };
+  const itemsToString = (items) => (items || []).join(', ');
 
-  const removeItem = (categoryName, index) => {
-    const category = gear[categoryName] || [];
-    const updated = category.filter((_, i) => i !== index);
-    updateCategory(categoryName, updated);
-  };
-
-  const updateItem = (categoryName, index, value) => {
-    const category = gear[categoryName] || [];
-    const updated = [...category];
-    updated[index] = value;
-    updateCategory(categoryName, updated);
-  };
+  const stringToItems = (value) =>
+    (value || '')
+      .split(/,|\n/g)
+      .map(s => s.trim())
+      .filter(Boolean);
 
   return (
     <div className="space-y-4">
@@ -81,27 +69,27 @@ export default function GearEditor({ gear, onChange }) {
               {/* Items List */}
               {expandedCategories[catName] && (
                 <div className="p-3 space-y-2">
-                  {items.map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
+                  {(() => {
+                    const draft = draftItemsText[catName] ?? itemsToString(items);
+                    return (
                       <TextEditor
-                        value={item}
-                        onChange={(value) => updateItem(catName, idx, value)}
-                        className="flex-1"
+                        label="Items (comma-separated)"
+                        multiline
+                        rows={4}
+                        value={draft}
+                        onChange={(value) =>
+                          setDraftItemsText((prev) => ({ ...prev, [catName]: value }))
+                        }
+                        onBlur={(value) => {
+                          updateCategory(catName, stringToItems(value));
+                          setDraftItemsText((prev) => ({ ...prev, [catName]: itemsToString(stringToItems(value)) }));
+                        }}
                       />
-                      <button
-                        onClick={() => removeItem(catName, idx)}
-                        className="px-3 py-2 text-red-600 hover:bg-red-50 rounded text-sm"
-                      >
-                        ×
-                      </button>
-                    </div>
-                  ))}
-                  <button
-                    onClick={() => addItem(catName)}
-                    className="w-full px-4 py-2 bg-blue-600 text-white rounded text-sm hover:bg-blue-700"
-                  >
-                    + Add Item
-                  </button>
+                    );
+                  })()}
+                  <div className="text-xs text-gray-500">
+                    Separate items with commas. Order is preserved.
+                  </div>
                 </div>
               )}
             </div>

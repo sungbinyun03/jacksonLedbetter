@@ -97,28 +97,35 @@ export default function Studio() {
 
       {/* services section */}
       <section id="services" className="section" style={{ textAlign: config.studio?.textAlign || 'left' }}>
-        <h2 className="text-3xl font-bold mb-8">Services</h2>
-        <ul className="list-disc pl-5 space-y-2 text-lg">
-          {services.map((service) => (
-            <li key={service}>{service}</li>
-          ))}
-        </ul>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">Services</h2>
+          <div className="flex justify-center">
+            <ul className="list-disc pl-5 space-y-2 text-lg text-left w-full max-w-2xl">
+              {services.map((service) => (
+                <li key={service}>{service}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
 
       {/* gear list */}
       <section className="section">
-        <h2 className="text-3xl font-bold mb-8">Studio 34 Gear</h2>
-
-        {Object.entries(studioGear).map(([cat, items]) => (
-          <div key={cat} className="mb-10">
-            <h3 className="text-xl font-semibold mb-2">{cat}</h3>
-            <ul className="list-disc pl-5 space-y-1">
-              {items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">Studio 34 Gear</h2>
+          <div className="grid gap-x-10 gap-y-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+            {Object.entries(studioGear).map(([cat, items]) => (
+              <div key={cat}>
+                <h3 className="text-xl font-semibold mb-2">{cat}</h3>
+                <ul className="list-disc pl-5 space-y-1">
+                  {items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </section>
     </div>
   );

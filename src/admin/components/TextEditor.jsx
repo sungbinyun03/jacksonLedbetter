@@ -2,6 +2,7 @@ export default function TextEditor({
   label,
   value,
   onChange,
+  onBlur,
   multiline = false,
   rows = 3,
   className = ""
@@ -20,6 +21,7 @@ export default function TextEditor({
         rows={multiline ? rows : undefined}
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        onBlur={onBlur ? (e) => onBlur(e.target.value) : undefined}
         className="w-full px-3 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
