@@ -26,7 +26,7 @@
       "Drum Lessons",
       "Music Production Lessons"
     ],
-    "textAlign": "left"
+    "textAlign": "center"
   },
   "about": {
     "images": [
@@ -89,13 +89,18 @@
       "AKG 414 XLII ×2",
       "AKG 414 XLS",
       "AKG D112",
+      "AKG D190C",
       "Beyerdynamic M58",
       "Cascade Fat Head‑SP ×2",
+      "Earthworks DM20 x2",
+      "Ear Trumpet Labs Chantelle",
+      "Ear Trumpet Labs Myrtle",
       "Electro‑Voice RE10 x2",
       "Electro‑Voice RE11",
       "Electro‑Voice RE15 x2",
       "Electro‑Voice RE16",
       "Electro‑Voice RE20",
+      "Electro‑Voice 623",
       "Electro‑Voice 635 x2",
       "Electro‑Voice 664 ×4",
       "Electro‑Voice Raven",
@@ -108,8 +113,9 @@
       "Royer R‑101",
       "Royer R‑10",
       "SE × RND RNR1",
-      "SE × RND RN17 ",
+      "SE × RND RN17",
       "SE x RND RNT",
+      "Soyuz 011 FET x2",
       "Soyuz 013 FET ×2",
       "Soyuz 017 FET",
       "Soyuz 1973 FET",
@@ -117,13 +123,15 @@
       "Shure KSM44",
       "Shure SM7B",
       "Shure SM57 ×2",
-      "Shure SM58 ×4",
-      "Shure Unisphere I"
+      "Shure SM58 ×2",
+      "Shure Spher-O-Dyne",
+      "Shure Unisphere I",
+      "Turner 95D"
     ],
     "Drums / Percussion": [
-      "SJC Tour Series Set: 22×18, 12×8, 16×16, 18×16",
-      "1960s Drum Mate Set 20x16, 14x5, 12x8, 14x14, ",
-      "Pacific Drums Set: 8×10, 10×12, 14×14, 20×16",
+      "SJC Tour Series Set: 22×18 12×8 16×16 18×16",
+      "1960s Drum Mate Set: 20x16 14x5 12x8 14x14",
+      "Pacific Drums Set: 8×10 10×12 14×14 20×16",
       "SJC Maple Snares: 14×5.5 & 14×5",
       "SJC Steel Snare 14×8",
       "Pearl Sensitone Steel Snare 14×5",
@@ -133,7 +141,10 @@
       "SJC 'Snom' 14×10",
       "LP Congas",
       "Vic Firth 32‑Key Xylophone",
-      "Wide variety of Meinl, Sabian, and Zildjian cymbals",
+      "KORG Volca Beat",
+      "Wide variety of Meinl",
+      "Sabian",
+      "and Zildjian cymbals",
       "Assorted percussion instruments"
     ],
     "Guitars / Basses": [
@@ -189,6 +200,7 @@
       "Wolff Audio Collaborator Headphone Amp"
     ],
     "Other": [
+      "Triad Orbit Stands",
       "TASCAM Field Recorder",
       "TEAC AX‑10 Stereo Echo Unit",
       "TEAC AN‑300 Dolby Noise Reduction Unit",
