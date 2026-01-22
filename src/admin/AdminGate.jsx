@@ -1,6 +1,9 @@
 import { useMemo, useState } from "react";
 
 const AUTH_STORAGE_KEY = "jl_admin_authed_v1";
+// NOTE: This is intentionally in source code per request.
+// Anyone who can view the built JS can eventually recover it.
+const HARDCODED_ADMIN_PASSWORD = "studio34AdminLogin0000";
 
 export function clearAdminAuth() {
   localStorage.removeItem(AUTH_STORAGE_KEY);
@@ -15,10 +18,11 @@ function isAuthed() {
 }
 
 export default function AdminGate({ children }) {
-  const expectedPassword = useMemo(
-    () => import.meta.env.VITE_ADMIN_PASSWORD,
-    []
-  );
+  // Prefer an env override if present, otherwise fall back to hardcoded.
+  const expectedPassword = useMemo(() => {
+    const envPw = import.meta.env.VITE_ADMIN_PASSWORD;
+    return envPw || HARDCODED_ADMIN_PASSWORD;
+  }, []);
 
   const [authed, setAuthed] = useState(isAuthed);
   const [password, setPassword] = useState("");
@@ -27,8 +31,6 @@ export default function AdminGate({ children }) {
   const submit = (e) => {
     e.preventDefault();
     setError("");
-
-    if (!expectedPassword) return;
 
     if (password === expectedPassword) {
       localStorage.setItem(AUTH_STORAGE_KEY, "1");
@@ -39,20 +41,6 @@ export default function AdminGate({ children }) {
 
     setError("Incorrect password.");
   };
-
-  if (!expectedPassword) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
-        <div className="w-full max-w-md bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-          <h1 className="text-lg font-bold">Admin locked</h1>
-          <p className="text-sm text-gray-600 mt-2">
-            No admin password is configured. Set <code>VITE_ADMIN_PASSWORD</code>{" "}
-            and redeploy.
-          </p>
-        </div>
-      </div>
-    );
-  }
 
   if (authed) return children;
 
