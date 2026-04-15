@@ -1,0 +1,4 @@
+This file exists to trigger Azure Static Web Apps redeploys.
+
+Last triggered: 2026-04-15
+
